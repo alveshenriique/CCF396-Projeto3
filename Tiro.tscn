@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://e3fvqhig1vmm"]
+
+[ext_resource type="Script" uid="uid://dpqorfae0rd0t" path="res://Tiro.gd" id="1_gp2hl"]
+[ext_resource type="Texture2D" uid="uid://cwxqnrqso8d0d" path="res://vacinaPixelada.png" id="2_wib4g"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a4dry"]
+size = Vector2(20, 85)
+
+[node name="Tiro" type="Area2D"]
+script = ExtResource("1_gp2hl")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0.5, 0.5)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_wib4g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -2.5)
+shape = SubResource("RectangleShape2D_a4dry")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

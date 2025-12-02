@@ -1,0 +1,235 @@
+[gd_scene load_steps=14 format=3 uid="uid://vahpld1nfwdy"]
+
+[ext_resource type="Script" uid="uid://c852t2w12treu" path="res://main.gd" id="1_0xm2m"]
+[ext_resource type="Texture2D" uid="uid://bd4c5juyii0se" path="res://fundo.png" id="2_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://dcpch61nhfr1g" path="res://Player.tscn" id="2_h2yge"]
+[ext_resource type="Texture2D" uid="uid://d07jwe3wp1spv" path="res://bolsonaroPixelado.png" id="4_1bvp3"]
+[ext_resource type="FontFile" uid="uid://bt1k83lmjsbkj" path="res://PressStart2P-Regular.ttf" id="5_5vw27"]
+[ext_resource type="Texture2D" uid="uid://cpyy6iqyqr37p" path="res://coracao.png" id="5_lquwl"]
+[ext_resource type="Texture2D" uid="uid://cbrniypa712iu" path="res://explosao.png" id="6_272bh"]
+[ext_resource type="Texture2D" uid="uid://c3yw8loxkfg8b" path="res://gameOver.png" id="7_5vw27"]
+[ext_resource type="Texture2D" uid="uid://cwxqnrqso8d0d" path="res://vacinaPixelada.png" id="9_4c57u"]
+[ext_resource type="VideoStream" uid="uid://b4q8xhbq3iyj5" path="res://videoBoss.ogv" id="9_kek77"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4c57u"]
+size = Vector2(308.10812, 373.78635)
+
+[sub_resource type="LabelSettings" id="LabelSettings_5vw27"]
+font = ExtResource("5_5vw27")
+font_size = 35
+font_color = Color(0.1931151, 1, 0.22935726, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_4c57u"]
+font = ExtResource("5_5vw27")
+font_size = 50
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)
+
+[node name="main" type="Node2D"]
+process_mode = 3
+script = ExtResource("1_0xm2m")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -76.0
+offset_top = 2.0
+offset_right = 674.0
+offset_bottom = 502.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_1bvp3")
+stretch_mode = 6
+
+[node name="Player" parent="." instance=ExtResource("2_h2yge")]
+z_index = 1
+position = Vector2(326, 468)
+
+[node name="Vilao" type="Sprite2D" parent="."]
+position = Vector2(-39, 62)
+scale = Vector2(0.185, 0.20600006)
+texture = ExtResource("4_1bvp3")
+
+[node name="VilaoArea" type="Area2D" parent="Vilao"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Vilao/VilaoArea"]
+position = Vector2(-24.324326, 65.533966)
+shape = SubResource("RectangleShape2D_4c57u")
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="LabelScore" type="Label" parent="CanvasLayer"]
+offset_right = 140.0
+offset_bottom = 35.0
+text = "1230"
+label_settings = SubResource("LabelSettings_5vw27")
+
+[node name="BoxContainer" type="BoxContainer" parent="CanvasLayer"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -125.0
+offset_bottom = 39.0
+grow_horizontal = 0
+
+[node name="Coracao1" type="TextureRect" parent="CanvasLayer/BoxContainer"]
+layout_mode = 2
+texture = ExtResource("5_lquwl")
+expand_mode = 2
+stretch_mode = 4
+
+[node name="Coracao2" type="TextureRect" parent="CanvasLayer/BoxContainer"]
+layout_mode = 2
+texture = ExtResource("5_lquwl")
+expand_mode = 2
+stretch_mode = 4
+
+[node name="Coracao3" type="TextureRect" parent="CanvasLayer/BoxContainer"]
+layout_mode = 2
+texture = ExtResource("5_lquwl")
+expand_mode = 2
+stretch_mode = 4
+
+[node name="BoxContainer2" type="BoxContainer" parent="CanvasLayer"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -426.0
+offset_bottom = 39.0
+grow_horizontal = 0
+
+[node name="vacina1" type="TextureRect" parent="CanvasLayer/BoxContainer2"]
+layout_mode = 2
+texture = ExtResource("9_4c57u")
+expand_mode = 2
+stretch_mode = 4
+
+[node name="vacina2" type="TextureRect" parent="CanvasLayer/BoxContainer2"]
+layout_mode = 2
+texture = ExtResource("9_4c57u")
+expand_mode = 2
+stretch_mode = 4
+
+[node name="vacina3" type="TextureRect" parent="CanvasLayer/BoxContainer2"]
+layout_mode = 2
+texture = ExtResource("9_4c57u")
+expand_mode = 2
+stretch_mode = 4
+
+[node name="vacina4" type="TextureRect" parent="CanvasLayer/BoxContainer2"]
+layout_mode = 2
+texture = ExtResource("9_4c57u")
+expand_mode = 2
+stretch_mode = 4
+
+[node name="vacina5" type="TextureRect" parent="CanvasLayer/BoxContainer2"]
+layout_mode = 2
+texture = ExtResource("9_4c57u")
+expand_mode = 2
+stretch_mode = 4
+
+[node name="vacina6" type="TextureRect" parent="CanvasLayer/BoxContainer2"]
+layout_mode = 2
+texture = ExtResource("9_4c57u")
+expand_mode = 2
+stretch_mode = 4
+
+[node name="vacina7" type="TextureRect" parent="CanvasLayer/BoxContainer2"]
+layout_mode = 2
+texture = ExtResource("9_4c57u")
+expand_mode = 2
+stretch_mode = 4
+
+[node name="vacina8" type="TextureRect" parent="CanvasLayer/BoxContainer2"]
+layout_mode = 2
+texture = ExtResource("9_4c57u")
+expand_mode = 2
+stretch_mode = 4
+
+[node name="vacina9" type="TextureRect" parent="CanvasLayer/BoxContainer2"]
+layout_mode = 2
+texture = ExtResource("9_4c57u")
+expand_mode = 2
+stretch_mode = 4
+
+[node name="vacina10" type="TextureRect" parent="CanvasLayer/BoxContainer2"]
+layout_mode = 2
+texture = ExtResource("9_4c57u")
+expand_mode = 2
+stretch_mode = 4
+
+[node name="GrupoGameOver" type="Control" parent="CanvasLayer"]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ImgExplosao" type="TextureRect" parent="CanvasLayer/GrupoGameOver"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -67.0
+offset_top = -18.0
+offset_right = 41.0
+offset_bottom = 64.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_272bh")
+
+[node name="ImgTexto" type="TextureRect" parent="CanvasLayer/GrupoGameOver"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -306.0
+offset_top = -183.5
+offset_right = 306.0
+offset_bottom = 183.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("7_5vw27")
+
+[node name="LabelVencedor" type="Label" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -25.0
+offset_right = 20.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+label_settings = SubResource("LabelSettings_4c57u")
+horizontal_alignment = 1
+
+[node name="VideoBoss" type="VideoStreamPlayer" parent="."]
+visible = false
+z_index = 10
+z_as_relative = false
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_right = 640.0
+offset_bottom = 480.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+stream = ExtResource("9_kek77")
+expand = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="finished" from="VideoBoss" to="." method="_on_video_boss_finished"]
