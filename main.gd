@@ -21,7 +21,7 @@ var cena_tiro = preload("res://Tiro.tscn")
 # --- VARIÁVEIS DE CONTROLE ---
 var modo_boss = false 
 var esperando_enter_boss = false 
-var municao = 10  
+var municao = 5  
 var jogo_acabou_final = false 
 
 # --- CONFIGURAÇÃO INICIAL (Roda 1 vez ao abrir) ---
@@ -158,7 +158,7 @@ func comecar_luta_real():
 	sprite_player.position.y = -30 
 	player.position.x = 320
 	
-	municao = 10 
+	municao = 5 
 
 # --- FINAIS DO JOGO ---
 

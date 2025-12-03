@@ -27,5 +27,4 @@ func _process(delta):
 func _on_area_entered(area):
 	if area.is_in_group("bombas"):
 		area.queue_free()
-		Global.score += 50
-		print("PEGOU!")
+		Global.score += 10

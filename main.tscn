@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://vahpld1nfwdy"]
+[gd_scene load_steps=15 format=3 uid="uid://vahpld1nfwdy"]
 
 [ext_resource type="Script" uid="uid://c852t2w12treu" path="res://main.gd" id="1_0xm2m"]
 [ext_resource type="Texture2D" uid="uid://bd4c5juyii0se" path="res://fundo.png" id="2_1bvp3"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://c3yw8loxkfg8b" path="res://gameOver.png" id="7_5vw27"]
 [ext_resource type="Texture2D" uid="uid://cwxqnrqso8d0d" path="res://vacinaPixelada.png" id="9_4c57u"]
 [ext_resource type="VideoStream" uid="uid://b4q8xhbq3iyj5" path="res://videoBoss.ogv" id="9_kek77"]
+[ext_resource type="AudioStream" uid="uid://cgg772ofsmvnp" path="res://HINO DO BRASIL ESTOURADO [JW_Rfr91PLg] (mp3cut.net).mp3" id="11_efxa6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4c57u"]
 size = Vector2(308.10812, 373.78635)
@@ -230,6 +231,10 @@ grow_vertical = 2
 size_flags_horizontal = 3
 stream = ExtResource("9_kek77")
 expand = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_efxa6")
+autoplay = true
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="finished" from="VideoBoss" to="." method="_on_video_boss_finished"]

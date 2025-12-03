@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cgg772ofsmvnp"
+path="res://.godot/imported/HINO DO BRASIL ESTOURADO [JW_Rfr91PLg] (mp3cut.net).mp3-e4f0a669b188b643ea7e9d88b57de00e.mp3str"
+
+[deps]
+
+source_file="res://HINO DO BRASIL ESTOURADO [JW_Rfr91PLg] (mp3cut.net).mp3"
+dest_files=["res://.godot/imported/HINO DO BRASIL ESTOURADO [JW_Rfr91PLg] (mp3cut.net).mp3-e4f0a669b188b643ea7e9d88b57de00e.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
